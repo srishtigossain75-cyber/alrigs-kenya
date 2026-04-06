@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALRigs Kenya | Sovereign Business AI</title>
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
             --bg-color: #0a0a0f;
             --primary-accent: #1a6bff;
             --secondary-accent: #00c2cb;
-            --text-white: #ffffff;
+            --white: #ffffff;
             --text-dim: #a0a0ab;
             --card-bg: #14141c;
         }
@@ -26,51 +27,18 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-white);
+            color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Utility */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(26, 107, 255, 0.3);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--secondary-accent);
-            color: var(--secondary-accent);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--secondary-accent);
-            color: var(--bg-color);
-        }
-
-        /* Nav Bar */
+        /* 1. NAV BAR */
         nav {
             padding: 1.5rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -85,51 +53,68 @@
         .logo {
             font-weight: 800;
             font-size: 1.5rem;
-            letter-spacing: -0.5px;
+            color: var(--white);
         }
 
         .nav-link {
             color: var(--secondary-accent);
             font-weight: 600;
             text-decoration: none;
+            letter-spacing: 0.5px;
         }
 
-        /* Hero Section */
+        /* 2. HERO */
         .hero {
             padding: 100px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 800;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            font-weight: 800;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
             color: var(--text-dim);
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 2.5rem;
         }
 
-        /* Who It Is For */
-        .who-it-is-for {
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary-accent);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(26, 107, 255, 0.3);
+        }
+
+        /* 3. WHO IT IS FOR */
+        .who-for {
             padding: 80px 0;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
             font-weight: 700;
+            margin-bottom: 3.5rem;
         }
 
-        .grid {
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
@@ -137,37 +122,36 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 3rem 2rem;
-            border-radius: 12px;
+            padding: 3.5rem 2rem;
+            border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
             transition: border-color 0.3s ease;
         }
 
         .card:hover {
-            border-color: var(--primary-accent);
+            border-color: var(--secondary-accent);
         }
 
         .card h3 {
             font-size: 1.5rem;
-            margin-bottom: 0;
+            font-weight: 600;
         }
 
-        /* Guarantee Section */
+        /* 4. THE GUARANTEE */
         .guarantee {
             background-color: #050508;
             padding: 100px 0;
-            margin: 80px 0;
+            text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
         }
 
         .guarantee h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-            color: var(--text-white);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            max-width: 950px;
+            margin: 0 auto 1rem;
             line-height: 1.2;
         }
 
@@ -177,100 +161,112 @@
             font-weight: 600;
         }
 
-        /* Territory Leader */
+        /* 5. YOUR TERRITORY LEADER */
         .leader {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
-        .leader-flex {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            background: var(--card-bg);
+        .leader-content {
+            background-color: var(--card-bg);
             padding: 4rem;
-            border-radius: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 850px;
+            margin: 0 auto;
         }
 
-        .leader-info h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .leader-title {
+        .leader-label {
             color: var(--primary-accent);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .leader-bio {
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-dim);
-        }
-
-        footer a {
-            color: var(--text-white);
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
             display: block;
         }
 
-        footer a:hover {
-            color: var(--secondary-accent);
+        .leader h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .leader-bio {
+            font-size: 1.15rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--white);
+            padding: 0.8rem 2rem;
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--bg-color);
+        }
+
+        /* 6. FOOTER */
+        footer {
+            padding: 80px 0 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-brand {
+            font-weight: 400;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--primary-accent);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .leader-flex {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem;
-            }
-            
-            .hero {
-                padding: 60px 0;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
+            .hero { padding: 60px 0; }
+            .leader-content { padding: 2.5rem 1.5rem; text-align: center; }
+            .section-title { font-size: 2rem; }
+            .guarantee p { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. NAV BAR -->
     <nav>
         <div class="container">
             <div class="logo">ALRigs</div>
-            <div class="nav-link">kenya.alrigs.com</div>
+            <a href="https://kenya.alrigs.com" class="nav-link">kenya.alrigs.com</a>
         </div>
     </nav>
 
+    <!-- 2. HERO -->
     <header class="hero">
         <div class="container">
             <h1>Kenyan businesses are growing fast — and losing money faster.</h1>
             <p>Cash flow blind spots, manual operations and poor process visibility are the silent killers of Kenyan SMBs. We give you control.</p>
-            <a href="mailto:kenya@alrigs.com" class="btn btn-primary">Talk to Srishti — Book 15 Minutes</a>
+            <a href="mailto:kenya@alrigs.com" class="btn">Talk to Srishti — Book 15 Minutes</a>
         </div>
     </header>
 
-    <section class="who-it-is-for">
+    <!-- 3. WHO IT IS FOR -->
+    <section class="who-for">
         <div class="container">
             <h2 class="section-title">Built for Kenyan Business</h2>
-            <div class="grid">
+            <div class="card-grid">
                 <div class="card">
                     <h3>Agri-Business & Supply Chain</h3>
                 </div>
@@ -284,6 +280,7 @@
         </div>
     </section>
 
+    <!-- 4. THE GUARANTEE -->
     <section class="guarantee">
         <div class="container">
             <h2>If the KPIs are not achieved, we re-engineer at our cost.</h2>
@@ -291,23 +288,23 @@
         </div>
     </section>
 
+    <!-- 5. YOUR TERRITORY LEADER -->
     <section class="leader">
         <div class="container">
-            <div class="leader-flex">
-                <div class="leader-info">
-                    <div class="leader-title">ALRigs Kenya Territory Leader</div>
-                    <h2>Srishti G.</h2>
-                    <p class="leader-bio">Srishti leads ALRigs Kenya, helping Kenyan founders and operators build sovereign AI infrastructure that pays for itself from day one.</p>
-                    <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline">Connect with Srishti on LinkedIn</a>
-                </div>
+            <div class="leader-content">
+                <span class="leader-label">ALRigs Kenya Territory Leader</span>
+                <h2>Srishti G.</h2>
+                <p class="leader-bio">Srishti leads ALRigs Kenya, helping Kenyan founders and operators build sovereign AI infrastructure that pays for itself from day one.</p>
+                <a href="https://www.linkedin.com" class="btn-outline">Connect with Srishti on LinkedIn</a>
             </div>
         </div>
     </section>
 
+    <!-- 6. FOOTER -->
     <footer>
         <div class="container">
-            <p>ALRigs — Sovereign | Business AI | Humanely</p>
-            <a href="https://www.alrigs.com">www.alrigs.com</a>
+            <p class="footer-brand">ALRigs — Sovereign | Business AI | Humanely</p>
+            <a href="https://www.alrigs.com" target="_blank">www.alrigs.com</a>
         </div>
     </footer>
 
