@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALRigs Kenya | Sovereign Business AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0f;
+            --primary-accent: #1a6bff;
+            --secondary-accent: #00c2cb;
+            --text-white: #ffffff;
+            --text-dim: #a0a0ab;
+            --card-bg: #14141c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(26, 107, 255, 0.3);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--secondary-accent);
+            color: var(--secondary-accent);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-accent);
+            color: var(--bg-color);
+        }
+
+        /* Nav Bar */
+        nav {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            color: var(--secondary-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Who It Is For */
+        .who-it-is-for {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary-accent);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background-color: #050508;
+            padding: 100px 0;
+            margin: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .guarantee h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+            color: var(--text-white);
+            line-height: 1.2;
+        }
+
+        .guarantee p {
+            font-size: 1.5rem;
+            color: var(--secondary-accent);
+            font-weight: 600;
+        }
+
+        /* Territory Leader */
+        .leader {
+            padding: 80px 0;
+        }
+
+        .leader-flex {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            background: var(--card-bg);
+            padding: 4rem;
+            border-radius: 20px;
+        }
+
+        .leader-info h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            color: var(--primary-accent);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .leader-bio {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+        }
+
+        footer a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+        }
+
+        footer a:hover {
+            color: var(--secondary-accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .leader-flex {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">ALRigs</div>
+            <div class="nav-link">kenya.alrigs.com</div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Kenyan businesses are growing fast — and losing money faster.</h1>
+            <p>Cash flow blind spots, manual operations and poor process visibility are the silent killers of Kenyan SMBs. We give you control.</p>
+            <a href="mailto:kenya@alrigs.com" class="btn btn-primary">Talk to Shrishti — Book 15 Minutes</a>
+        </div>
+    </header>
+
+    <section class="who-it-is-for">
+        <div class="container">
+            <h2 class="section-title">Built for Kenyan Business</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Agri-Business & Supply Chain</h3>
+                </div>
+                <div class="card">
+                    <h3>Logistics & Last-Mile</h3>
+                </div>
+                <div class="card">
+                    <h3>Services & Fintech-Adjacent</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <h2>If the KPIs are not achieved, we re-engineer at our cost.</h2>
+            <p>No other AI company in Kenya offers this. We do.</p>
+        </div>
+    </section>
+
+    <section class="leader">
+        <div class="container">
+            <div class="leader-flex">
+                <div class="leader-info">
+                    <div class="leader-title">ALRigs Kenya Territory Leader</div>
+                    <h2>Shrishti G.</h2>
+                    <p class="leader-bio">Shrishti leads ALRigs Kenya, helping Kenyan founders and operators build sovereign AI infrastructure that pays for itself from day one.</p>
+                    <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline">Connect with Shrishti on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ALRigs — Sovereign | Business AI | Humanely</p>
+            <a href="https://www.alrigs.com">www.alrigs.com</a>
+        </div>
+    </footer>
+
+</body>
+</html>
